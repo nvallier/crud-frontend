@@ -43,6 +43,23 @@ input {
   padding: 20px;
 }
 
+#updateUser {
+  background-color: #ABEBC6;
+  padding: 20px;
+  margin: 0 auto;
+  width: 70%;
+  border-radius: 10px;
+}
+
+.modal-update {
+  visibility:hidden;
+  position: absolute;
+  top: 70px;
+  width: 90%;
+  background-color:#A0F7A6;
+  border-radius: 10px;
+}
+
 .modal.active {
   visibility:visible;
 }
@@ -50,6 +67,7 @@ input {
 .modal-content.active {
   visibility:visible;
 }
+
 
 @media only screen and (max-width: 768px) {
   #main-content {
