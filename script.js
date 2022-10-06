@@ -14,7 +14,7 @@ var users = [
 ];
 
 $.each(users, function(i, user) {
-  appendToUsrTable(user);
+  userList(user);
 });
 
 $("form").submit(function(e) {
@@ -33,26 +33,35 @@ $("form#addUser").submit(function() {
   
   addUser(user);
   } else {
-    alert("hello");
+    console.log("Error");
   }
 });
 
 function addUser(user) {
   users.push(user);
-  appendToUsrTable(user);
-  console.log("deu")
+  userList(user);
 }
 
-function appendToUsrTable(user) {
+function userList(user) {
   $("#userTable > tbody:last-child").append(`
         <tr id="user-${user.id}">
             <td class="userData" name="name">${user.name}</td>
             '<td align="center">
-                <button class="btn btn-success form-control" onClick="editUser(${user.id})" data-toggle="modal" data-target="#myModal")">EDIT</button>
+                <button class="form-control" onClick="editUser(${user.id})" data-toggle="modal" data-target="#myModal")">EDIT</button>
             </td>
             <td align="center">
-                <button class="btn btn-danger form-control" onClick="deleteUser(${user.id})">DELETE</button>
+                <button class="form-control" onClick="deleteUser(${user.id})">DELETE</button>
             </td>
         </tr>
     `);
+}
+
+function deleteUser(id) {
+  var deleteMsg = confirm("Confirm to delete.");
+  users.forEach(function(user, i) {
+    if (user.id == id && deleteMsg != false) {
+      users.splice(i, 1);
+      $("#userTable #user-" + user.id).remove();
+    }
+  });
 }
