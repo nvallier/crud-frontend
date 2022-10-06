@@ -1,0 +1,60 @@
+#main-content {
+    margin: 80px;
+}
+
+button {
+    background-color: #3361FF;
+    color: white;
+    border-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal {
+  visibility:hidden;
+  position: absolute;
+  top: 70px;
+  width: 90%;
+  background-color:#DAF7A6;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 18px;
+}
+
+input {
+  width: 75%;
+  border: none;
+  padding: 10px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+  
+.modal-content {
+  visibility:hidden;
+  padding: 20px;
+}
+
+.modal.active {
+  visibility:visible;
+}
+    
+.modal-content.active {
+  visibility:visible;
+}
+
+@media only screen and (max-width: 768px) {
+    #main-content {
+        display: flex;
+        margin-top: 25px;
+        justify-content: center;
+    }
+}
