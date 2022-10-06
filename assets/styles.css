@@ -52,9 +52,26 @@ input {
 }
 
 @media only screen and (max-width: 768px) {
-    #main-content {
-        display: flex;
-        margin-top: 25px;
-        justify-content: center;
-    }
+  #main-content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px;
+      justify-content: center;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .modal {
+    position: absolute;
+    z-index: 5;
+    left: 5%;
+  }
+
+  .list {
+    position: relative;
+    width: 100%;
+    top: 40px;
+  }
 }

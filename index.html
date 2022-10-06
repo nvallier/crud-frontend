@@ -16,16 +16,25 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>Add Client</p>
-                    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-                        Full Name:<br><br>
-                        <input type="text" name="fullname" placeholder="Your name..."><br><br>
-                        <button type="submit" class="open">Submit</button>
+                    <form id="addUser" action="">
+                        <div class="form-group">
+                            Full Name:<br><br>
+                            <input type="text" name="name" class="form-control" placeholder="Your name..."><br><br>
+                            <button type="submit" class="close form-control">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </section>
         <section class="list">
-
+            <div class="users">
+                <h1>Users</h1>
+                <table id="userTable" class="table table-striped">
+                    <tr>
+                      <th>Name</th>
+                    </tr>
+                </table>
+            </div>
         </section>
     </main>
     <script src="script.js"></script>
